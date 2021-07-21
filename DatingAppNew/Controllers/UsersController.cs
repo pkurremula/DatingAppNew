@@ -28,7 +28,7 @@ namespace DatingAppNew.Controllers
             return users;
         }
 
-        //api/users/1
+        //api/users/1 
         [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUserAsync(int id)
         {
