@@ -5,10 +5,12 @@ using DatingAppNew.Entities;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace DatingAppNew.Controllers
 {
 
+    
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
@@ -21,6 +23,7 @@ namespace DatingAppNew.Controllers
             _dbContext = dbContext;
         }
 
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
